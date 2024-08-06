@@ -38,7 +38,8 @@ public class MemberSaveServlet extends HttpServlet {
 
     // 클라이언트에 HTML 응답 전송
     PrintWriter w = response.getWriter();
-    w.write("<html>\n" +
+    w.write(
+        "<html>\n" +
         "<head>\n" +
         " <meta charset=\"UTF-8\">\n" +
         "</head>\n" +

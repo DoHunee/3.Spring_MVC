@@ -15,7 +15,7 @@ import jakarta.servlet.http.HttpServletResponse;
 // http://localhost:8080/servlet/members
 @WebServlet(name = "memberListServlet", urlPatterns = "/servlet/members")
 public class MemberListServlet extends HttpServlet {
-  private MemberRepository memberRepository = MemberRepository.getInstance();
+  private final MemberRepository memberRepository = MemberRepository.getInstance();
 
   @Override
   protected void service(HttpServletRequest request, HttpServletResponse response)
