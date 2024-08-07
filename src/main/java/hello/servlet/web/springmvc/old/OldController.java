@@ -7,14 +7,14 @@ import org.springframework.web.servlet.mvc.Controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-// localhost:8080/springmvc/old-controller
+// http://localhost:8080/springmvc/old-controller
 @Component("/springmvc/old-controller")
 public class OldController implements Controller {
 
     @Override
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         System.out.println("OldController.handleRequest");
-        return null;
-        // return ModelAndView("new-form"); // 오류 페이지가 뜨지만 컨트롤러 호출은 된다 => 뷰 리졸버를 만들어줘야 함
+        return new ModelAndView("new-form"); // 오류 페이지가 뜨지만 컨트롤러 호출은 된다 => 뷰 리졸버를 만들어줘야 함
+    
     }
 }
